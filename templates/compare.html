@@ -1,0 +1,27 @@
+{% extends "home.html" %}
+{% block content %}
+
+   <style>
+    h4{
+        text-align: center;
+        color: chocolate;
+    }
+    .input{
+        text-align: center;
+        margin-top: 30px;
+    }
+   </style>  
+</head>
+  <body>
+    <h1>COMPARE TWO STRINGS</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <form action="/compare" method="post">
+        <div class="input">
+            <input type="text" name="str1" placeholder="Enter first string"><br><br>
+            <input type="text" name="str2" placeholder="Enter second string"><br><br>
+            <input type="submit" value="Compare"><br><br>
+            <h4>Letter-wise(Uppercase/Lowercase): {{letter_wise}}</h4><br>
+            <h4>Meaning-wise: {{meaning_wise}}</h4>
+        </div>
+    </form> 
+{%endblock%}

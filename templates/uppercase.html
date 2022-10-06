@@ -1,0 +1,25 @@
+{% extends "home.html" %}
+{% block content %}
+
+  <style>
+    h4{
+        text-align: center;
+        color: chocolate;
+    }
+    .input{
+        text-align: center;
+        margin-top: 30px;
+    }
+  </style>
+</head>
+  <body>
+    <h1>CONVERT STRING TO UPPERCASE</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <div class="input">
+    <form action="/uppercase" method="post">
+        <input type="text" name="upper">
+        <input type="submit" value="Submit"><br><br>
+        <h4>Uppercase Conversion : {{string_upper}}</h4>
+    </form>
+    </div>
+{%endblock%}
